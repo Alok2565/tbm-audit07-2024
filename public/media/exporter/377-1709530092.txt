@@ -1,0 +1,143 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 02, 2024 at 11:29 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.1.17
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_biosamiemain21`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exporters`
+--
+
+CREATE TABLE `exporters` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` varchar(211) DEFAULT NULL,
+  `ip_address` varchar(211) DEFAULT NULL,
+  `application_number` varchar(255) DEFAULT NULL,
+  `sending_iec_number` varchar(255) DEFAULT NULL,
+  `sending_applicant_name` varchar(255) DEFAULT NULL,
+  `sending_applicant_design` varchar(255) DEFAULT NULL,
+  `sending_add_company_institute` varchar(255) DEFAULT NULL,
+  `comp_institute_denied_export_auth_last_3_years` varchar(255) DEFAULT NULL,
+  `denied_export_auth_last_3_years_yes_no` varchar(255) DEFAULT NULL,
+  `upload_comp_institute_denied_export` varchar(255) DEFAULT NULL,
+  `receving_recipient_name` varchar(255) DEFAULT NULL,
+  `receving_recipient_design` varchar(255) DEFAULT NULL,
+  `receiving_add_company_institute` varchar(255) DEFAULT NULL,
+  `end_user_receiving_party` varchar(255) DEFAULT NULL,
+  `end_user_receiving_party_yes_no` varchar(255) DEFAULT NULL,
+  `end_user_name` varchar(255) DEFAULT NULL,
+  `end_user_address` varchar(255) DEFAULT NULL,
+  `hs_code` varchar(255) DEFAULT NULL,
+  `hs_code_description` varchar(256) DEFAULT NULL,
+  `natural_biomaterial_exported` varchar(255) DEFAULT NULL,
+  `natural_biomaterial_exported_details` varchar(256) DEFAULT NULL,
+  `sample_collected` varchar(255) DEFAULT NULL,
+  `sample_collected_details` varchar(256) DEFAULT NULL,
+  `samples_being_exported` varchar(255) DEFAULT NULL,
+  `samples_being_exported_details` varchar(256) DEFAULT NULL,
+  `exported_number` varchar(255) DEFAULT NULL,
+  `exported_volume` varchar(255) DEFAULT NULL,
+  `repeat_samples_envisaged` varchar(255) DEFAULT NULL,
+  `repeat_samples_envisaged_yes_no` varchar(255) DEFAULT NULL,
+  `specify_purpose_end_use` varchar(255) DEFAULT NULL,
+  `specify_purpose_end_use_details` varchar(255) DEFAULT NULL,
+  `samples_used_research_analysis` varchar(255) DEFAULT NULL,
+  `samples_used_research_analysis_yes_no` varchar(255) DEFAULT NULL,
+  `leftover_samples_store` varchar(255) DEFAULT NULL,
+  `leftover_samples_store_yes_no` varchar(255) DEFAULT NULL,
+  `purpose_sample_store` varchar(255) DEFAULT NULL,
+  `purpose_sample_store_details` varchar(255) DEFAULT NULL,
+  `duration_sample_store` varchar(255) DEFAULT NULL,
+  `facility_sample_store` varchar(255) DEFAULT NULL,
+  `national_security_angle` varchar(255) DEFAULT NULL,
+  `national_security_angle_yes_no` varchar(255) DEFAULT NULL,
+  `foreign_country_army_military` varchar(255) DEFAULT NULL,
+  `foreign_country_army_military_yes_no` varchar(255) DEFAULT NULL,
+  `biomaterial_micro_organisms_approval` varchar(255) DEFAULT NULL,
+  `biomaterial_micro_organisms_approval_file` varchar(255) DEFAULT NULL,
+  `ibsc_rcgm_approval_applicable` varchar(255) DEFAULT NULL,
+  `ibsc_rcgm_approval_applicable_file` varchar(255) DEFAULT NULL,
+  `sender_certify_information_provided` varchar(255) DEFAULT NULL,
+  `certified_copy_proforma` varchar(255) DEFAULT NULL,
+  `sender_signature` varchar(255) DEFAULT NULL,
+  `sender_name` varchar(255) DEFAULT NULL,
+  `sender_designation` varchar(255) DEFAULT NULL,
+  `sender_address` varchar(255) DEFAULT NULL,
+  `sender_date` varchar(211) DEFAULT NULL,
+  `recipient_certify_samples_referred` varchar(255) DEFAULT NULL,
+  `recipient_name_institution` varchar(255) DEFAULT NULL,
+  `recipient_utilized_for_purpose` varchar(255) DEFAULT NULL,
+  `recipient_signature` varchar(255) DEFAULT NULL,
+  `recipient_name` varchar(255) DEFAULT NULL,
+  `recipient_designation` varchar(255) DEFAULT NULL,
+  `recipient_address` varchar(255) DEFAULT NULL,
+  `recipient_date` timestamp NULL DEFAULT NULL,
+  `declaration_letter` varchar(255) DEFAULT NULL,
+  `icmr_off_status` varchar(211) DEFAULT '0',
+  `icmr_noc_status` varchar(211) NOT NULL DEFAULT '0',
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `exporters`
+--
+
+INSERT INTO `exporters` (`id`, `user_id`, `ip_address`, `application_number`, `sending_iec_number`, `sending_applicant_name`, `sending_applicant_design`, `sending_add_company_institute`, `comp_institute_denied_export_auth_last_3_years`, `denied_export_auth_last_3_years_yes_no`, `upload_comp_institute_denied_export`, `receving_recipient_name`, `receving_recipient_design`, `receiving_add_company_institute`, `end_user_receiving_party`, `end_user_receiving_party_yes_no`, `end_user_name`, `end_user_address`, `hs_code`, `hs_code_description`, `natural_biomaterial_exported`, `natural_biomaterial_exported_details`, `sample_collected`, `sample_collected_details`, `samples_being_exported`, `samples_being_exported_details`, `exported_number`, `exported_volume`, `repeat_samples_envisaged`, `repeat_samples_envisaged_yes_no`, `specify_purpose_end_use`, `specify_purpose_end_use_details`, `samples_used_research_analysis`, `samples_used_research_analysis_yes_no`, `leftover_samples_store`, `leftover_samples_store_yes_no`, `purpose_sample_store`, `purpose_sample_store_details`, `duration_sample_store`, `facility_sample_store`, `national_security_angle`, `national_security_angle_yes_no`, `foreign_country_army_military`, `foreign_country_army_military_yes_no`, `biomaterial_micro_organisms_approval`, `biomaterial_micro_organisms_approval_file`, `ibsc_rcgm_approval_applicable`, `ibsc_rcgm_approval_applicable_file`, `sender_certify_information_provided`, `certified_copy_proforma`, `sender_signature`, `sender_name`, `sender_designation`, `sender_address`, `sender_date`, `recipient_certify_samples_referred`, `recipient_name_institution`, `recipient_utilized_for_purpose`, `recipient_signature`, `recipient_name`, `recipient_designation`, `recipient_address`, `recipient_date`, `declaration_letter`, `icmr_off_status`, `icmr_noc_status`, `updated_at`, `created_at`) VALUES
+(76, '3', NULL, 'ICMR/EXPORT/2024/517436', '0200015443', 'OSTER CHEMICAL & PHARMACEUTICAL WORKS PVT LTD', 'Importer', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OSTER CHEMICAL & PHARMACEUTICAL WORKS PVT LTD', 'Importer', 'Delhi', '28-02-2024 14:41:08', 'OSTER CHEMICAL & PHARMACEUTICAL WORKS PVT LTD', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '2024-03-02 09:37:53', '2024-03-02 09:37:53'),
+(77, '1', NULL, 'ICMR/EXPORT/2024/725341', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 14:47:45', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 03:47:52', '2024-02-28 03:47:52'),
+(78, '1', NULL, 'ICMR/EXPORT/2024/354029', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 14:52:19', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 03:52:25', '2024-02-28 03:52:25'),
+(79, '1', NULL, 'ICMR/EXPORT/2024/615830', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 14:54:26', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 03:54:31', '2024-02-28 03:54:31'),
+(80, '1', NULL, 'ICMR/EXPORT/2024/709265', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 14:58:01', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 03:58:05', '2024-02-28 03:58:05'),
+(81, '1', NULL, 'ICMR/EXPORT/2024/259340', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 15:00:12', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 04:00:14', '2024-02-28 04:00:14'),
+(82, '1', NULL, 'ICMR/EXPORT/2024/372456', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 15:01:46', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 04:02:01', '2024-02-28 04:02:01'),
+(83, '1', NULL, 'ICMR/EXPORT/2024/854179', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 15:04:56', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 04:05:02', '2024-02-28 04:05:02'),
+(84, '1', NULL, 'ICMR/EXPORT/2024/052381', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 15:08:45', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 04:08:50', '2024-02-28 04:08:50'),
+(85, '1', NULL, 'ICMR/EXPORT/2024/534890', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 15:09:44', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 04:09:48', '2024-02-28 04:09:48'),
+(86, '1', NULL, 'ICMR/EXPORT/2024/954127', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 15:11:37', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 04:11:41', '2024-02-28 04:11:41'),
+(87, '1', NULL, 'ICMR/EXPORT/2024/123407', 'AAICR8954R', 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, ',', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'RUDANI ENTERPRISES PRIVATE LIMITED', 'Manager', 'New Delhi', '28-02-2024 15:12:45', 'RUDANI ENTERPRISES PRIVATE LIMITED', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0', '0', '2024-02-28 04:12:49', '2024-02-28 04:12:49'),
+(88, '3', NULL, 'ICMR/EXPORT/2024/00088', '0200015443', 'OSTER CHEMICAL & PHARMACEUTICAL WORKS PVT LTD', 'Importer', 'Delhi,,,,', 'jai sani dev1', 'yes', '475-1709363297.pdf', 'Johan', 'CEO', 'New York', 'jai sani dev2', 'Yes', 'Rajaram', 'USA', '30012010', 'Liquid extracts of liver', 'Whole blood,Nucleic acid,Other body fluids', 'jai sani dev3', 'Inpatient hospital facility,Outpatient hospital facility,Others', 'jai sani dev4', 'Yes', 'jai sani dev5', '12', 'ML', 'jai sani dev6', 'Yes', 'Calibration/ Quality assurance,Others', 'jai sani dev7', 'Genomic studies/Gene Variant/SNP analysis,Proteomic Studies,Others,jai sani dev8', 'Yes', 'jai sani dev9', NULL, 'Retesting purposes,Further analysis', 'jai sani dev10', '2 Years', 'UK', 'jai sani dev11', 'Yes', 'jai sani dev12', 'Yes', 'Yes', '918-1709363297.pdf', 'Yes', '364-1709363297.pdf', 'Calibration/ Quality assurance, Others,', '792-1709363297.pdf', NULL, 'OSTER CHEMICAL & PHARMACEUTICAL WORKS PVT LTD', 'Importer', 'Delhi', '02-03-2024 12:33:47', 'OSTER CHEMICAL & PHARMACEUTICAL WORKS PVT LTD', 'Johan', 'Calibration/ Quality assurance, Others,', NULL, NULL, NULL, NULL, NULL, '737-1709363297.pdf', '0', '0', '2024-03-02 01:38:17', '2024-03-02 01:38:17');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `exporters`
+--
+ALTER TABLE `exporters`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `exporters`
+--
+ALTER TABLE `exporters`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

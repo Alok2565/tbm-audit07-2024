@@ -1,0 +1,1 @@
+ping -c 1 v3-ping-2964-0d66b295-c604-4565-b644-d06b763255e7.adns.appscan.com

